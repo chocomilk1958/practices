@@ -15,10 +15,8 @@ class Persona():    # Clase padre(superClass).
 class Empleado(Persona):
     def __init__(self, salario, antiguedad, nombreEmpleado, edadEmpleado, residenciaEmpleado):
 
-        super().__init__(nombreEmpleado, edadEmpleado, residenciaEmpleado)    # El metodo "super" permite acceder a los metodos de otra clase.
-                                                                              # En este ejemplo el nombre del empleado,
-                                                                              # su edad y su residencia van a ser transportados al constructor de la clase "Persona",
-                                                                              # mientras que los otros argumentos serán usados en la clase "Empleado"
+        super().__init__(nombreEmpleado, edadEmpleado, residenciaEmpleado)    # El metodo "super" permite acceder a los metodos de otra clase. En este ejemplo el nombre del empleado, su edad y su residencia van a ser transportados al constructor de la clase "Persona", mientras que los otros argumentos serán usados en la clase "Empleado"
+
         self.salario = salario
         
         self.antiguedad = antiguedad
@@ -34,3 +32,6 @@ antonio = Empleado(20000, 25, "Antonio", 55, "España")   # Instancia de clase "
 antonio.descripcion()    # Llamamos al metodo "descripcion" de la clase "Empleado".
 
 print(isinstance(antonio, Empleado))    # El metodo "isinstance" sirve para saber si X objeto es instancia de X clase.
+pepe = Persona("Pepe", 25, "Argentina")
+
+print(isinstance(pepe, Persona))
